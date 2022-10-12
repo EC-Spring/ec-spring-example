@@ -34,6 +34,14 @@ public class Community {
         this.updatedAt = updatedAt;
     }
 
+    public Community(String title, String content) {
+        this();
+        this.title = title;
+        this.content = content;
+        this.views = 0L;
+        this.createdAt = System.currentTimeMillis();
+    }
+
     public Long getId() {
         return id;
     }
@@ -56,5 +64,9 @@ public class Community {
 
     public Long getUpdatedAt() {
         return updatedAt;
+    }
+
+    public void increaseViews() {
+        views++;
     }
 }
