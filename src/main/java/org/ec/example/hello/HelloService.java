@@ -2,6 +2,7 @@ package org.ec.example.hello;
 
 import org.ec.example.hello.dto.HelloRequest;
 import org.ec.example.hello.dto.HelloResponse;
+import org.ec.example.hello.exception.HelloNotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,7 +28,6 @@ public class HelloService {
         return new HelloResponse(hello.getId(), hello.getContent());
     }
 
-    @Transactional
     public HelloResponse putHello(HelloRequest helloRequest, Long id) {
         Hello hello = helloRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Hello Entity is not found."));
@@ -37,6 +37,8 @@ public class HelloService {
     }
 
     public Long deleteHello(Long id) {
+        if (!helloRepository.existsById(id))
+            throw new HelloNotFound("Hello Entity is not found.");
         helloRepository.deleteById(id);
         return id;
     }
