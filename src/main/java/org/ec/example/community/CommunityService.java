@@ -2,6 +2,7 @@ package org.ec.example.community;
 
 import org.ec.example.community.dto.CommunityRequest;
 import org.ec.example.community.dto.CommunityResponse;
+import org.ec.example.community.exception.CommunityNotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ public class CommunityService {
 
     public CommunityResponse getCommunity(Long id) {
         Community community = communityRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Community is not found."));
+                .orElseThrow(() -> new CommunityNotFound("Community is not found."));
         community.increaseViews();
         Community updated = communityRepository.save(community);
         return new CommunityResponse(updated.getId(), updated.getTitle(), updated.getContent(), updated.getViews(), updated.getCreatedAt(), updated.getUpdatedAt());
