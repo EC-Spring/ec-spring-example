@@ -1,4 +1,4 @@
-package org.ec.example.hello;
+package org.ec.example.community.dto.hello;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

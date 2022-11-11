@@ -1,18 +1,18 @@
-package org.ec.example.hello.dto;
+package org.ec.example.community.dto.hello.dto;
 
 import org.springframework.stereotype.Component;
 
 @Component
-public class HelloResponse {
+public class HelloRequest {
 
     private Long id;
     private String content;
 
-    protected HelloResponse() {
+    protected HelloRequest() {
         super();
     }
 
-    public HelloResponse(Long id, String content) {
+    public HelloRequest(Long id, String content) {
         this();
         this.id = id;
         this.content = content;

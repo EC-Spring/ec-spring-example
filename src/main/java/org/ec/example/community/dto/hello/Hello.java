@@ -1,4 +1,4 @@
-package org.ec.example.hello;
+package org.ec.example.community.dto.hello;
 
 import javax.persistence.*;
 

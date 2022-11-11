@@ -1,4 +1,4 @@
-package org.ec.example.hello.exception;
+package org.ec.example.community.dto.hello.exception;
 
 public class HelloNotFound extends RuntimeException {
 

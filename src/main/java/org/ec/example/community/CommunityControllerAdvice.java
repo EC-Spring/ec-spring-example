@@ -1,7 +1,6 @@
 package org.ec.example.community;
 
 import org.ec.example.community.exception.CommunityNotFound;
-import org.ec.example.hello.exception.HelloNotFound;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

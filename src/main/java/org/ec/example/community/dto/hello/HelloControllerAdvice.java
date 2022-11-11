@@ -1,6 +1,6 @@
-package org.ec.example.hello;
+package org.ec.example.community.dto.hello;
 
-import org.ec.example.hello.exception.HelloNotFound;
+import org.ec.example.community.dto.hello.exception.HelloNotFound;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

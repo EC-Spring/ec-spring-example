@@ -1,7 +1,7 @@
-package org.ec.example.hello;
+package org.ec.example.community.dto.hello;
 
-import org.ec.example.hello.dto.HelloRequest;
-import org.ec.example.hello.dto.HelloResponse;
+import org.ec.example.community.dto.hello.dto.HelloRequest;
+import org.ec.example.community.dto.hello.dto.HelloResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
